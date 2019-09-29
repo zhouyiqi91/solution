@@ -1,3 +1,4 @@
+package leetcode;
 // 二叉搜索树的修剪
 
 public class Solution669 {

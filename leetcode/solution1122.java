@@ -1,3 +1,4 @@
+package leetcode;
 
 import static org.junit.Assert.*;
 public class solution1122 {
