@@ -5,17 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-//二叉树层次遍历
-public class Solution23 {
-    public static class TreeNode {
-        int val = 0;
-        TreeNode left = null;
-        TreeNode right = null;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
+//二叉树层次遍历:从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+public class Solution23 extends Template{
 
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
@@ -25,7 +16,7 @@ public class Solution23 {
         while (!queue.isEmpty()) {
             int size = queue.size();
             while (size > 0) {
-                TreeNode x = queue.poll();
+                TreeNode x = queue.poll(); //remove,poll不同：remove 在队列为空时抛出异常，poll返回 null
                 res.add(x.val);
                 if (x.left != null) queue.add(x.left);
                 if (x.right != null) queue.add(x.right);
